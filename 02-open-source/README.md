@@ -82,6 +82,9 @@ Links:
 
 * https://huggingface.co/microsoft/Phi-3-mini-128k-instruct
 
+we can check the kind of HPU we have in the terminal of jupyter notebook with nvidia-smi
+with watch nvidia-smi we can leave it open and see real life. We need to shutdown the other model so we can start with Phi-3-mini
+
 ## 2.5 Mistral-7B and HuggingFace Hub Authentication
 
 <a href="https://www.youtube.com/watch?v=TdVEOzSoUCs&list=PL3MmuxUbc_hIB4fSqLy_0AfTjVLpgjV3R">
@@ -134,6 +137,7 @@ Links:
 
 * The easiest way to run an LLM without a GPU is using [Ollama](https://github.com/ollama/ollama)
 * Notebook [ollama.ipynb](ollama.ipynb)
+
 
 For Linux:
 
