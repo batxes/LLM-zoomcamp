@@ -40,6 +40,31 @@ we also need: pip install sentence_transformers==2.7.0
 pipenv install sentence_transformers
 Now lets go through the notebook:
 
+Sentence Transformer, a.k.a. as SBERT, will help you with a simple call, calling pretrained models in one line code. 
+Then, thanks to this,  we can do the inference also in one line.
+
+LINK in: https://www.sbert.net/docs/sentence_transformer/pretrained_models.html
+
+every time yo pass a certain text to the model, you get back a vector.
+
+Next we create the embeddings, 1 for each data in documents
+
+next, connect to elasticsearch
+
+now we need to create an index. For that we need first to create a mapping.
+we need to provide the metadate to create a schema right? so here the same, the mapping will have all the metadata of the document data.
+
+After that, we need to populate the index with the embeddings.
+for everyt document pus it into the index, with a for loop
+
+At this moment, all the black lines in the image of the notebook are done. Nowe we need to create a user query, step6.
+
+Every term in the search term has to be converted into a vector as well. We do that with mode.encode.
+
+and finally we seach with elasticsearch.
+
+
+
 
  
 
