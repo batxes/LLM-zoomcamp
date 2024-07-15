@@ -129,6 +129,21 @@ Links:
 
 * [Notebook](eval/evaluate-text.ipynb)
 
+Here we will use the data created in previous video to validate text search results.
+We will take the grounde truth data that we generated previously.
+
+For each query in our ground_truth_datasets:
+    we will execute the query
+    check if document is in the results
+    and we will use Hit rate and tge Mean reciproval Rank (MRR)
+
+we will use evaluate_text.ipynb
+
+I will run the elasticsearch server with docker first and index the documents.
+
+
+
+
 ### 3.3.4 Ranking evaluation: vector search
 
 <a href="https://www.youtube.com/watch?v=VRprIm9-VV8&list=PL3MmuxUbc_hIB4fSqLy_0AfTjVLpgjV3R">
@@ -141,6 +156,10 @@ Links:
 Links:
 
 * [Notebook](eval/evaluate-vector.ipynb)
+
+We will do the same as before but with vector search.
+
+
 
 ## Homework
 
