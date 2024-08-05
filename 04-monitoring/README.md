@@ -66,6 +66,8 @@ collect chat history and user feedback.
   <img src="https://markdown-videos-api.jorgenkh.no/youtube/yTO5sRw6x78">
 </a>
 
+* We have a function with hs raf(q), and we want to evaluate the entire function, which contains search, build_promot and llm.
+
 
 Links:
 
@@ -87,6 +89,8 @@ Content
 * Evaluating gpt-3.5-turbo
 * Evaluating gpt-4o-mini
 
+    - We will use first the cosine function. Basically, for all answers with llm, we compare with ground truth answer
+
 Links:
 
 * [notebook](offline-rag-evaluation.ipynb)
@@ -105,6 +109,8 @@ Links:
 * LLM as a judge
 * A->Q->A' evaluation
 * Q->A evaluation
+
+    - The same but using the same LLM as a judge, so it gives as results which we asked if it is relevant or not.
 
 
 Links:
@@ -141,6 +147,16 @@ Links:
 * [intermediate code from claude](code.md#46-capturing-user-feedback)
 
 
+* to run it, inside /app start docker-compose up
+* add export OPENAI_API_KEY and POSTGRES_HOST
+* then, python prep.py 
+* access to postgress with command above: pgcli -h ... and then \l to check databases, \c course_assistant to connect and \dt to check tables
+* Then go to streamlit: localhost:8501
+* Ask a question and do thumbs up. Then go to the db and select * from conversations and feedback to see that it appears.
+
+
+)
+
 ### 4.6.2 Capturing user feedback: part 2 
 
 <a href="https://www.youtube.com/watch?v=BG8MlbidatA&list=PL3MmuxUbc_hIB4fSqLy_0AfTjVLpgjV3R">
@@ -173,6 +189,13 @@ Links:
 * [final code](app/)
 * [SQL queries for Grafana](grafana.md)
 * [intermediate code from claude](code.md#47-monitoring)
+
+* access Grafana in localhost:3000 -> admin admin
+* inside add data source -> postgres
+* url: postgres, name: course_assistant, your_username, your_password, disable ssl
+* then create dashboard -> add a new panel -> add a query: check in grafana.md
+* We can generate more data with python generate_data.py. If we get error change the POSTGRES_HOST to localhost
+
 
 ### 4.7.2 Extra Grafana video
 
